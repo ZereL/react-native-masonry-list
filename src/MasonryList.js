@@ -247,6 +247,7 @@ export default class MasonryList extends React.Component<Props, State> {
             renderItem={({ item, index }) =>
               renderItem({ item, index, column: col.index })}
             renderScrollComponent={this._renderScrollComponent}
+            listKey={(item, index) => 'zxj' + index.toString()} // Hank Add
             keyExtractor={keyExtractor}
             onEndReached={onEndReached}
             onEndReachedThreshold={this.props.onEndReachedThreshold}
